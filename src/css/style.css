@@ -1,0 +1,100 @@
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+body {
+    background-color: beige;
+}
+a {
+    text-decoration: none;
+    color: #fff;
+}
+div.top-line {
+    position: absolute;
+    width: 100vw;
+    padding: 50px 0;
+    top: 10%;
+    left: 0;
+    background-color: #b7b7a3;
+}
+div.top-line h1 {
+    text-align: center;
+    color: #3b3d32;
+}
+div.container-center {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div.table {
+    padding: 25px;
+    background-color: #b18a5f;
+    border-radius: 100%;
+    box-shadow: 0px 5px 10px 1px #3b3d32;
+    margin: 20px;
+    transition: all .5s;
+}
+div.table:hover,
+div.button:hover {
+    transform: translateY(-20px);
+    transition: all .5s;
+    cursor: pointer;
+}
+div.button {
+    text-align: center;
+    border-radius: 20px;
+    color: #000;
+    background-color: rgb(185, 185, 164);
+}
+div.button.button-choice {
+    width: fit-content;
+    padding: 10px 20px;
+    margin: 20px;
+    font-size: 20px;
+    transition: all .5s;
+}
+div.button-choice a {
+    color: #000;
+}
+input[type="checkbox"]{
+    display: none;
+}
+div.container-center form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 50%;
+}
+div.product {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border: 2px solid #989889;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+div.sidebar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height:100vh;
+    min-width: 200px;
+    max-width: 220px;
+    background-color: #b7b7a3;
+}
+div.sidebar-element {
+    padding: 20px;
+}
+div.sidebar-element:hover {
+    cursor: pointer;
+    background-color: #9d9d8b;
+}
+div.sidebar-element.selected {
+    background-color: #2b2b27;
+    color: #fff;
+    font-weight: 700;
+}

@@ -18,22 +18,23 @@ require "../vendor/autoload.php";
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Kiezen tafel</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<pre>
+    <div class="top-line">
+        <h1>Selecteer een tafel</h1>
+    </div>
+    <div class="table-container container-center">
+        <?php
+            // TODO: alle tafels ophalen uit de database en als hyperlinks laten zien (maak gebruik van class TafelModel)
+            // Zoiets als dit:
 
-<?php
-
-    
-
-    // TODO: alle tafels ophalen uit de database en als hyperlinks laten zien (maak gebruik van class TafelModel)
-    // Zoiets als dit:
-
-    $tafel = new TafelModel();
-    $alles=$tafel->getAll();
-    foreach ($alles as $yep) {
-        echo "<div><a href='keuze.php?idtafel={$yep->getColumnValue("idtafel")}'>{$yep->getColumnValue("omschrijving")}</div>";
-    }
-?>
+            $tafel = new TafelModel();
+            $alles=$tafel->getAll();
+            foreach ($alles as $yep) {
+                echo "<div class='table'><a href='keuze.php?idtafel={$yep->getColumnValue("idtafel")}'>{$yep->getColumnValue("omschrijving")}</div>";
+            }
+        ?>
+    </div>
 </body>
 </html>
