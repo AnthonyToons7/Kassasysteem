@@ -39,10 +39,10 @@ error_reporting(E_ALL);
     
         foreach ($products as $product) {
             echo '<pre>';
-            
             echo "<div>";
             echo "<label><input type='checkbox' name='products[]' value='{$product->getColumnValue('idproduct')}'>{$product->getColumnValue('naam')}</label>";
-            echo " <label>Aantal:<input type='number' name='product{$product->getColumnValue('idproduct')}'></label>";
+            echo " <label>Aantal:<input type='number' name='product{$product->getColumnValue('idproduct')}'></label><br>";
+            echo `<h1>Prijs:`.$product->getColumnValue('prijs').`</h1>`;
             echo "</div>";
             
             
