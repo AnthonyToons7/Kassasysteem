@@ -21,11 +21,18 @@ if ($idTafel = $_POST['idtafel'] ?? false) {
     $order = new Bestelling($idTafel, $productIds);
 
     $order->addProducts($_POST['products']);
-    foreach ($productIds as $product){   
-        $order->saveBestelling();
+    var_dump($order->getBestelling());
+    
+    $index = 2; // Start index from 2 based on the dump provided
+    while (isset($_POST['product'.$index])) {
+        if ($_POST['product'.$index] !== ''){
+            var_dump($_POST['product'.$index]);
+            $order->saveBestelling();
+        } 
+        $index++;
     }
-        $order->getBestelling();
-
+    
+    die();
 } else {
     http_response_code(404);
     include('error_404.php');

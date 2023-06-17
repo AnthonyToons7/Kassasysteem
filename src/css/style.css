@@ -39,30 +39,35 @@ div.table {
     transition: all .5s;
 }
 div.table:hover,
-div.button:hover {
+.button:hover {
     transform: translateY(-20px);
     transition: all .5s;
     cursor: pointer;
 }
-div.button {
+.button {
     text-align: center;
     border-radius: 20px;
     color: #000;
     background-color: rgb(185, 185, 164);
 }
-div.button.button-choice {
+.button.button-choice {
     width: fit-content;
     padding: 10px 20px;
     margin: 20px;
     font-size: 20px;
     transition: all .5s;
 }
-div.button-choice a {
+.button-choice a {
     color: #000;
 }
 input[type="checkbox"]{
     display: none;
+    margin-right: 20px;
 }
+input[type="checkbox"]:checked ~ div.product {
+    border: 2px solid green;
+}
+
 div.container-center form {
     display: flex;
     flex-wrap: wrap;
@@ -72,10 +77,16 @@ div.container-center form {
 div.product {
     display: flex;
     flex-direction: column;
-    padding: 10px;
+    padding: 15px;
     border: 2px solid #989889;
     border-radius: 5px;
     margin: 10px 0;
+    height: 100px;
+    width: 170px;
+    text-align: center;
+}
+div.product p {
+    margin-top: 18px;
 }
 div.sidebar {
     position: absolute;
@@ -97,4 +108,13 @@ div.sidebar-element.selected {
     background-color: #2b2b27;
     color: #fff;
     font-weight: 700;
+}
+button.button.button-next {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    padding: 10px 20px;
+    border: 2px solid #2b2b27;
+    font-size: 18px;
+    transition: all .5s;
 }

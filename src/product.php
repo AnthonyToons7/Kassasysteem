@@ -71,12 +71,12 @@ error_reporting(E_ALL);
                             $additionalClass = 'dessert';
                         }
                         echo "<div class='product {$additionalClass}'>";
-                        echo "<label><input type='checkbox' name='products[]' value='{$product->getColumnValue('idproduct')}'>{$product->getColumnValue('naam')}</label>";
-                        echo " <label>Aantal:<input type='number' name='product{$product->getColumnValue('idproduct')}'></label><br>";
-                        echo "<h2>&euro;".$product->getColumnValue('prijs')."</h2>";
+                        echo "<label><input type='checkbox' name='products[]' value='{$product->getColumnValue('idproduct')}' class='product-checkbox'>{$product->getColumnValue('naam')}</label>";
+                        // echo " <label>Aantal:<input type='number' name='product{$product->getColumnValue('idproduct')}'></label><br>";
+                        echo "<p>&euro;".$product->getColumnValue('prijs')."</p>";
                         echo "</div>";
                     }
-                echo "<button>Volgende</button>";
+                echo "<button class='button button-next'>Volgende</button>";
             } else {
                 // QUESTION: Wat gebeurt hier?
                 // Antwoord: Als de tafelId leeg is en/of niet bestaat, dan redirect deze code jou naar een pagina die je simpelweg laat zien dat de pagina niet gevonden is

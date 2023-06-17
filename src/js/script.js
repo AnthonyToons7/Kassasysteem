@@ -6,7 +6,23 @@ sidebarElements.forEach(element=>{
         element.classList.add('selected');
         changeCategory(element.id);
     })
-})
+});
+
+const checkboxes = document.querySelectorAll(".product-checkbox");
+checkboxes.forEach(checkbox => {
+    checkbox.addEventListener("change", () => {
+        const productContainer = checkbox.closest(".product");
+        if (productContainer) {
+            if (checkbox.checked) {
+                productContainer.style.borderColor = "green";
+            } else {
+                productContainer.style.borderColor = "";
+            }
+        }
+    });
+});
+
+window.addEventListener("load",changeCategory("drink"));
 function changeCategory(id) {
     document.querySelectorAll('.product').forEach(product=>product.style.display="none");
 
