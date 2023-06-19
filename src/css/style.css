@@ -1,10 +1,14 @@
+@font-face {
+    font-family: bill;
+    src: url(StickNoBills-Light.ttf);
+}
 * {
    padding: 0;
    margin: 0;
    box-sizing: border-box;
-   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     background-color: beige;
 }
 a {
@@ -124,13 +128,38 @@ button.button.button-next {
     top: 0;
     left: 50%;
     transform: translate(-50%,0);
-    background-color: #fff;
+    background-color: #f9f9f9;
     width: 50%;
     height: 100%;
     padding: 10px;
+    font-family:bill !important;
+}
+.bill-container h1 {
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px #000 dashed;
+    margin: 0 30px;
+}
+.bill-container h3 {
+    text-align: end;
 }
 .bill-product{
-    font-family:monospace !important;
+    width: 90%;
     display: flex;
     justify-content: space-between;
+    margin: auto;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.bill-product p {
+    font-size: 18px;
+    width: 33%;
+}
+.bill-amount {
+    text-align: end;
+}
+#subtotal{
+    padding: 10px;
+    border-top: 1px #000 dashed;
+    margin: 0 30px;
 }

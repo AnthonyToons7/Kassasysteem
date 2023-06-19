@@ -49,8 +49,6 @@ class Rekening
             }
         }
 
-        //TODO: 'totaal' toevoegen aan de rekening
-
         return $bill;
     }
 

@@ -30,19 +30,22 @@ if ($idTafel) {
         <?php
             foreach ($bill["products"] as $product){
                 $totalPrice = $product["data"]["prijs"] * $product["aantal"];
+                //TODO: 'totaal' toevoegen aan de rekening
                 $total +=$totalPrice;
                 echo '<div class="bill-product">';
                 echo '<p>'.$product["data"]["naam"].'</p>';
-                echo '<p>&euro;'.$totalPrice.'</p>';
                 echo '<p>x '.$product["aantal"].'</p>';
+                echo '<p class="bill-amount">&euro;'.$totalPrice.'</p>';
                 echo '</div>';
             }
-            echo '<h3>Subtotaal: &euro;'.$total.'</h3>';
+            
+            echo '<h3 id="subtotal">Subtotaal: &euro;'.$total.'</h3>';
         ?>
     </div>
 
     <?php
         //TODO: bestelling op betaald zetten
+        $rekening->setPaid($idTafel);
         
 } else {
     http_response_code(404);
