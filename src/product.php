@@ -72,7 +72,7 @@ error_reporting(E_ALL);
                         }
                         echo "<div class='product {$additionalClass}'>";
                         echo "<label><input type='checkbox' name='products[]' value='{$product->getColumnValue('idproduct')}' class='product-checkbox'>{$product->getColumnValue('naam')}</label>";
-                        // echo " <label>Aantal:<input type='number' name='product{$product->getColumnValue('idproduct')}'></label><br>";
+                        echo " <label>Aantal:<input type='number' name='product{$product->getColumnValue('idproduct')}'></label><br>";
                         echo "<p>&euro;".$product->getColumnValue('prijs')."</p>";
                         echo "</div>";
                     }

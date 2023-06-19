@@ -15,21 +15,22 @@ if ($idTafel = $_POST['idtafel'] ?? false) {
     $productIds = $_POST['products'];
 
     // TODO: De bestelling doorvoeren in de database (maak gebruik van de Bestelling class)
-
-    // // $_POST['products'] geeft een array van de product id's terug
     echo"<pre>";
     $order = new Bestelling($idTafel, $productIds);
 
-    $order->addProducts($_POST['products']);
+    $order->addProducts($productIds);
     var_dump($order->getBestelling());
-    
-    $index = 2; // Start index from 2 based on the dump provided
-    while (isset($_POST['product'.$index])) {
-        if ($_POST['product'.$index] !== ''){
-            var_dump($_POST['product'.$index]);
-            $order->saveBestelling();
-        } 
-        $index++;
+    $order->getBestelling();
+    foreach ($productIds as $product) {
+        $index = 2;
+        while (isset($_POST['product'.$index])) {
+            if ($_POST['product'.$index] !== ''){
+                for($asd=0;$asd<$_POST['product'.$index];$asd++){
+                    $order->saveBestelling();
+                }
+            } 
+            $index++;
+        }
     }
     
     die();

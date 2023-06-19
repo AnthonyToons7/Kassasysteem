@@ -32,7 +32,7 @@ require "../vendor/autoload.php";
             $tafel = new TafelModel();
             $alles=$tafel->getAll();
             foreach ($alles as $yep) {
-                echo "<div class='table'><a href='keuze.php?idtafel={$yep->getColumnValue("idtafel")}'>{$yep->getColumnValue("omschrijving")}</div>";
+                echo "<a href='keuze.php?idtafel={$yep->getColumnValue("idtafel")}'><div class='table'>{$yep->getColumnValue("omschrijving")}</div></a>";
             }
         ?>
     </div>

@@ -22,8 +22,8 @@ use Acme\model\TafelModel;
         <?php
         $idTafel = $_GET['idtafel'] ?? false;
         if ($idTafel) {
-            echo "<div class='button button-choice'><a href='product.php?idtafel={$idTafel}'>Bestelling maken</a></div>";
-            echo "<div class='button button-choice'><a href='rekening.php?idtafel={$idTafel}'>Afrekenen</a></div>";
+            echo "<a href='product.php?idtafel={$idTafel}'><div class='button button-choice'>Bestelling maken</div></a>";
+            echo "<a href='rekening.php?idtafel={$idTafel}'><div class='button button-choice'>Afrekenen</div></a>";
         } else {
             http_response_code(404);
             include('error_404.php');
