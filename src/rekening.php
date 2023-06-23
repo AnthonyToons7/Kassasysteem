@@ -44,7 +44,6 @@ if ($idTafel) {
     </div>
 
     <?php
-        //TODO: bestelling op betaald zetten
         $rekening->setPaid($idTafel);
         
 } else {

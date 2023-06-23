@@ -15,11 +15,9 @@ if ($idTafel = $_POST['idtafel'] ?? false) {
     $productIds = $_POST['products'];
 
     // TODO: De bestelling doorvoeren in de database (maak gebruik van de Bestelling class)
-    echo"<pre>";
     $order = new Bestelling($idTafel, $productIds);
-
     $order->addProducts($productIds);
-    var_dump($order->getBestelling());
+    $order->getBestelling();
     $order->getBestelling();
     foreach ($productIds as $product) {
         $index = 2;
@@ -32,8 +30,6 @@ if ($idTafel = $_POST['idtafel'] ?? false) {
             $index++;
         }
     }
-    
-    die();
 } else {
     http_response_code(404);
     include('error_404.php');
