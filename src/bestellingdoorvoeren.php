@@ -18,12 +18,11 @@ if ($idTafel = $_POST['idtafel'] ?? false) {
     $order = new Bestelling($idTafel, $productIds);
     $order->addProducts($productIds);
     $order->getBestelling();
-    $order->getBestelling();
     foreach ($productIds as $product) {
         $index = 2;
         while (isset($_POST['product'.$index])) {
             if ($_POST['product'.$index] !== ''){
-                for($asd=0;$asd<$_POST['product'.$index];$asd++){
+                for($number=0;$number<$_POST['product'.$index];$number++){
                     $order->saveBestelling();
                 }
             } 

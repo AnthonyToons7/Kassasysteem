@@ -47,13 +47,13 @@ class Rekening
                 if (!isset($bill['products'][$idProduct]['aantal'])) $bill['products'][$idProduct]['aantal'] = 0;
                 $bill['products'][$idProduct]['aantal']++;
 
-                //TODO: bestelling op betaald zetten
-                $mysqli = new mysqli("localhost", "root", "root", "kassasysteem", "3306");
-                $qry = "UPDATE betaald FROM product_tafel WHERE idtafel=? VALUES (?)";
-                $mysqli_stmt = $mysqli->prepare($qry);
-                $mysqli_stmt->bind_param('ii', $idTafel, "1");
-                $mysqli_stmt->execute();
-                $result = $mysqli_stmt->get_result();
+                // //TODO: bestelling op betaald zetten
+                // $mysqli = new mysqli("localhost", "root", "root", "kassasysteem", "3306");
+                // $qry = "UPDATE betaald FROM product_tafel WHERE idtafel=? VALUES (?)";
+                // $mysqli_stmt = $mysqli->prepare($qry);
+                // $mysqli_stmt->bind_param('ii', $idTafel, "1");
+                // $mysqli_stmt->execute();
+                // $result = $mysqli_stmt->get_result();
             }
         }
 

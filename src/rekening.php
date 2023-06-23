@@ -20,8 +20,6 @@ if ($idTafel) {
         //TODO: bestelling ophalen en tonen op een mooie manier door gebruik te maken van Rekening.php
         $rekening = new Rekening($idTafel);
         $bill = $rekening->getBill($idTafel);
-        echo"<pre>";
-        var_dump($bill["products"]);
         $total = 0;
     ?>
 
