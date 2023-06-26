@@ -3,14 +3,17 @@
 namespace Acme;
 
 use Acme\classes\Rekening;
-
+session_start();
 require "../vendor/autoload.php";
+$idTafel = $_GET['idtafel'] ?? null;
+if ($_SESSION['paid'] != "true"){
+    include_once "setPaid.php";
+}
 
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-$idTafel = $_GET['idtafel'] ?? null;
 if ($idTafel) {
     ?>
 
