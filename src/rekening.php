@@ -3,12 +3,8 @@
 namespace Acme;
 
 use Acme\classes\Rekening;
-session_start();
 require "../vendor/autoload.php";
 $idTafel = $_GET['idtafel'] ?? null;
-if ($_SESSION['paid'] != "true"){
-    include_once "setPaid.php";
-}
 
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
@@ -43,9 +39,17 @@ if ($idTafel) {
             echo '<h3 id="subtotal">Subtotaal: &euro;'.$total.'</h3>';
         ?>
     </div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded",()=>{
+            xhttp = new XMLHttpRequest();
+            xhttp.open("POST", "setPaid.php?idtafel=<?=$idTafel?>", true);
+            xhttp.send();
+        })
+    </script>
 
     <?php
-        $rekening->setPaid($idTafel);
+        // $rekening->setPaid($idTafel);
         
 } else {
     http_response_code(404);
