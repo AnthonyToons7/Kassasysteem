@@ -29,7 +29,7 @@ error_reporting(E_ALL);
         <div class="sidebar-element" id="dessert">Desserts</div>
         <div class="sidebar-element" id="other">Overig</div>
     </div>
-    <div class="container-center">
+    <div class="container-center products">
         <form action="bestellingdoorvoeren.php" method="post">
             <?php
 
@@ -88,6 +88,6 @@ error_reporting(E_ALL);
 
         </form>
     </div>
-        <script src="js/script.js"></script>
+    <script src="js/script.js" defer></script>
 </body>
 </html>

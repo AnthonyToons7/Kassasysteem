@@ -1,6 +1,7 @@
 const sidebarElements = document.querySelectorAll('.sidebar-element');
 sidebarElements.forEach(element=>{
     element.addEventListener('click',()=>{
+        console.log("asd");
         const selectedElement = document.querySelector('.selected');
         selectedElement.classList.remove('selected');
         element.classList.add('selected');

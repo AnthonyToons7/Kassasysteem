@@ -86,8 +86,8 @@ div.product {
     border: 2px solid #989889;
     border-radius: 5px;
     margin: 10px 0;
-    height: 100px;
-    width: 170px;
+    /* height: 100px;
+    width: 170px; */
     text-align: center;
 }
 div.product p {
@@ -139,7 +139,7 @@ button.button.button-next {
     padding: 10px;
     border-bottom: 1px #000 dashed;
     margin: 0 30px;
-}
+}ol0-
 .bill-container h3 {
     text-align: end;
 }
@@ -162,4 +162,37 @@ button.button.button-next {
     padding: 10px;
     border-top: 1px #000 dashed;
     margin: 0 30px;
+}
+input[type="number"]{
+    margin-top: 20px;
+}
+@media screen and (max-width:768px) {
+    div.container-center{
+        flex-wrap: wrap;
+        height: unset;
+        position: absolute;
+        top: 50%;
+    }
+    .products {
+        top: 0 !important;
+        right: 0;
+        justify-content: flex-end !important;
+    }
+    .button.button-next{
+        left: 20px;
+        right: unset !important;
+    }
+    .sidebar {
+        border-bottom-right-radius: 15px;
+    }
+    div.product {
+        height: unset;
+    }
+    input[type="number"]{
+        width: 50%;
+        margin-top: 10px;
+    }
+.bill-container {
+    font-size: 18px;
+}
 }

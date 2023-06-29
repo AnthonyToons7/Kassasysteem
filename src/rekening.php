@@ -40,13 +40,13 @@ if ($idTafel) {
         ?>
     </div>
     
-    <script>
+    <!-- <script>
         document.addEventListener("DOMContentLoaded",()=>{
             xhttp = new XMLHttpRequest();
             xhttp.open("POST", "setPaid.php?idtafel=<?=$idTafel?>", true);
             xhttp.send();
         })
-    </script>
+    </script> -->
 
     <?php
         // $rekening->setPaid($idTafel);
