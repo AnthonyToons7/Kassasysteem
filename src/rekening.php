@@ -35,18 +35,14 @@ if ($idTafel) {
                 echo '<p class="bill-amount">&euro;'.$totalPrice.'</p>';
                 echo '</div>';
             }
-            
-            echo '<h3 id="subtotal">Subtotaal: &euro;'.$total.'</h3>';
+            echo '<div class="bill-product">';
+            echo '<p>BTW</p>';
+            echo '<p></p>';
+            echo '<p class="bill-amount">21%</p>';
+            echo '</div>';
+            echo '<h3 id="subtotal">Subtotaal: &euro;'.($total / 100 * 121).'</h3>';
         ?>
     </div>
-    
-    <!-- <script>
-        document.addEventListener("DOMContentLoaded",()=>{
-            xhttp = new XMLHttpRequest();
-            xhttp.open("POST", "setPaid.php?idtafel=<?=$idTafel?>", true);
-            xhttp.send();
-        })
-    </script> -->
 
     <?php
         // $rekening->setPaid($idTafel);
