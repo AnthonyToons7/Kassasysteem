@@ -1,4 +1,4 @@
-# Kassasysteem
+# Kassasysteem (het meest rigged school project ooit)
 Proftaak-project waar je in je eentje aan werkt om je coding skills te oefenen.
 
 >Leerdoelen
